@@ -116,9 +116,6 @@ const server = http.createServer(async (req, res) => {
       case '/api/usuarios/import':
         try {
           await impUsuario(res)
-          // Envia mensaje de éxito como respuesta
-          res.writeHead(200, { 'Content-Type': 'text/html' })
-          res.end('Usuarios importados')
         } catch (err) {
           // Maneja errores al importar usuarios
           console.error('Error al importar', err)
